@@ -74,7 +74,6 @@ WSGI_APPLICATION = 'contact_manager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -83,6 +82,8 @@ DATABASES = {
         'PASSWORD': 'Quim_0710',
         'HOST': 'daw.inspedralbes.cat',
         'PORT': '3306',
+      
+
     }
 }
 
