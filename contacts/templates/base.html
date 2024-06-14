@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django Project{% endblock %}</title>
+    <!-- Static files -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Include additional CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <!-- Add more navigation links here -->
+        </ul>
+    </nav>
+    
+    <!-- Main content area -->
+    <div id="content">
+        {% block content %}
+        <!-- This is where the page-specific content will go -->
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Django Project. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="{% static 'js/script.js' %}"></script>
+    <!-- Include additional JS -->
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
